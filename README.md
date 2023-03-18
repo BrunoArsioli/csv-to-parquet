@@ -46,7 +46,7 @@ Examples
 Here are some examples of how to use this script:
 
 python
-Copy code
+```
 # convert a single .csv file to a .parquet file
 csv_to_parquet('path/to/csv/file.csv')
 
@@ -54,7 +54,10 @@ csv_to_parquet('path/to/csv/file.csv')
 csv_list = ['path/to/csv/file1.csv', 'path/to/csv/file2.csv', 'path/to/csv/file3.csv']
 for csv_file in csv_list:
     csv_to_parquet(csv_file)
+```
+
 License
+
 This project is licensed under the MIT License. See the LICENSE file for more information.
 
 Acknowledgments
