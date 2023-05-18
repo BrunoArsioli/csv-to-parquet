@@ -25,11 +25,18 @@ def csv_to_parquet(csv_path):
         datadf = pd.read_csv(f"{csv_path}")
     except ValueError:
         raise ValueError("Input file is not a valid .csv file.")  
-    
+
+    # define function to decode byte strings in the DataFrame
+    def decode_bytes(value):
+        return value.decode('utf-8') if isinstance(value, bytes) else value    
+        
+    # decode byte columns 
+    datadf = datadf.applymap(decode_bytes)    
+                
     # help user deal with exception in case input file is not .csv file.
     if not csv_path.endswith('.csv'):
         raise ValueError("Input file has wrong extension. Must be .csv")
-
+        
     # remove extention from csv_path
     if csv_path.endswith('.csv'):
         parquet_path = csv_path.replace(".csv", ".parquet")
