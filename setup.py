@@ -3,7 +3,9 @@ from setuptools import setup
 setup(
     name='csv-to-parquet',
     version='1.0',
-    packages=['csv_to_parquet'],
+    packages=['csv_to_parquet'],    
+    author='Bruno Arsioli',
+    author_email='bruno.arsioli@proton.me',
     install_requires=[
         'pandas',
         'astropy'
