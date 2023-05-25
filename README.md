@@ -1,4 +1,5 @@
-# csv-to-parquet.py
+# csv-to-parquet
+
 Python Package to convert .csv files to .parquet. Improve storage efficiency of large .csv files
 
 This Python package converts .csv files to .parquet files using the astropy and pandas libraries. The resulting .parquet files are compressed and can be read faster than uncompressed .csv files, and take much less physical memory to store. 
@@ -15,7 +16,7 @@ You can install these libraries using pip. Open a terminal or command prompt and
 ```
 pip install astropy
 pip install pandas
-pip install git+https://github.com/BrunoArsioli/csv-to-parquet.py.git
+pip install git+https://github.com/BrunoArsioli/csv-to-parquet.git
 #Import my gitbhu libraries
 from csv_to_parquet.csv_to_parquet import csv_to_parquet
 ```
@@ -26,7 +27,7 @@ Or, in Google Colab
 !pip install astropy
 !pip install pandas
 #Import the csv_to_parquet gitbhu libraries
-!pip install git+https://github.com/BrunoArsioli/csv-to-parquet.py.git
+!pip install git+https://github.com/BrunoArsioli/csv-to-parquet.git
 ```
 
 Usage
